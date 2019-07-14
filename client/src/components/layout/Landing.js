@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class Landing extends Component {
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/dashboard')
+      this.props.history.push('/dashboard');
     }
   }
   render() {
@@ -14,7 +14,7 @@ class Landing extends Component {
         <div className='row'>
           <div className='col s12 center-align'>
             <h4>
-              <b>TOOD</b> App made with <i className='fa fa-heart' /> and the{' '}
+              <b>TODO</b> App made with <i className='fa fa-heart' /> and the{' '}
               <span style={{ fontFamily: 'monospace' }}>MERN</span> stack
             </h4>
             <p className='flow-text grey-text text-darken-1'>
@@ -47,13 +47,13 @@ class Landing extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 const mapStateToProps = state => ({
   auth: state.auth
-})
+});
 export default connect(
   mapStateToProps,
   null
-)(Landing)
+)(Landing);
